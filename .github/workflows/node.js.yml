@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - master  # or 'master', depending on your repo
+      - master  # ✅ use your actual default branch
 
 permissions:
   contents: write
@@ -13,18 +13,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: '20.11.0'  # ✅ match your Node version
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build the React app
+      - name: Build React app
         run: npm run build
 
       - name: Deploy to GitHub Pages
@@ -32,3 +32,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          user_name: github-actions
+          user_email: github-actions@github.com
