@@ -4,17 +4,17 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white px-4 sm:px-8 py-4 shadow-lg sticky top-0 z-50">
+    <nav className="bg-[#0b001a]  text-white px-4 sm:px-8 py-4 shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           {/* Initials */}
-          <div className="w-8 h-8 bg-yellow-400 text-black flex items-center justify-center rounded-full font-bold shadow-md">
+          <div className="w-10 h-10 bg-yellow-100 text-black flex items-center justify-center rounded-full font-bold shadow-md animate-slide-in">
             JN
           </div>
 
           {/* Name */}
-          <span className="font-bold text-lg tracking-wide animate-pulse">
+          <span className="font-bold text-3xl tracking-wide animate-fade-in">
             Jaydip Nemade
           </span>
         </div>
@@ -22,7 +22,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-8 text-sm lg:text-base animate-slide-in">
           {[
-            "about",
+            // "about",
             "skills",
             "projects",
             "experience",
@@ -75,7 +75,7 @@ const Navbar = () => {
       {isOpen && (
         <ul className="md:hidden mt-4 space-y-4 text-center animate-fade-in">
           {[
-            "about",
+            // "about",
             "skills",
             "projects",
             "experience",
