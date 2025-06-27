@@ -33,6 +33,7 @@ jobs:
           git config --global user.name "Jaydip Nemade"
 
       - name: Deploy to GitHub Pages
-        run: npm run deploy
         env:
-          CI: false
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically available
+        run: npm run deploy
+      
