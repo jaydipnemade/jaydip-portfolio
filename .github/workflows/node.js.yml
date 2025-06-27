@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - master  # ✅ use your actual default branch
+      - master  # Use 'main' if your default branch is 'main'
 
 permissions:
   contents: write
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.11.0'  # ✅ match your Node version
+          node-version: '20.11.0'
 
       - name: Install dependencies
         run: npm install
@@ -27,10 +27,5 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          user_name: github-actions
-          user_email: github-actions@github.com
+      - name: Deploy using gh-pages (no-cache)
+        run: npm run deploy
