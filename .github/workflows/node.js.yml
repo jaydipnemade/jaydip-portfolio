@@ -27,5 +27,12 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Deploy using gh-pages (no-cache)
+      - name: Set Git identity
+        run: |
+          git config --global user.email "jaydipnemade@gmail.com"
+          git config --global user.name "Jaydip Nemade"
+
+      - name: Deploy to GitHub Pages
         run: npm run deploy
+        env:
+          CI: false
