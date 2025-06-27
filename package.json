@@ -13,7 +13,8 @@
   "homepage": "https://jaydipnemade.github.io/jaydip-portfolio",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+   "deploy": "gh-pages -d build -u \"github-actions-bot <support+actions@github.com>\" -r https://x-access-token:${GITHUB_TOKEN}@github.com/jaydipnemade/jaydip-portfolio.git",
+
     "clean": "gh-pages-clean",
     "build": "react-scripts build"
   },
