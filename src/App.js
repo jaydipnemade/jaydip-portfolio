@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-purple-100 min-h-screen text-gray-800 scroll-smooth">
       <Navbar />
-      <main className="max-w-4xl mx-auto p-6">
+      <main className="">
         <About />
         <Skills />
         <Projects />

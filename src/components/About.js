@@ -1,13 +1,15 @@
 import React from "react";
+import jaydipnemade from "./jaydipnemade.png"; // Adjust the path as necessary
 
 const About = () => {
   return (
     <section id="about" className="text-center mt-10">
       <img
-        src="https://avatars.githubusercontent.com/u/12345678?v=4"
+        src={jaydipnemade}
         alt="Jaydip Nemade"
-        className="w-32 h-32 rounded-full mx-auto border-4 border-blue-400 shadow-lg"
+        className="h-44 rounded-xl mx-auto border-2 border-blue-400 shadow-lg"
       />
+
       <h1 className="text-4xl font-bold mt-4">Jaydip Nemade</h1>
       <p className="text-lg text-blue-600">Full Stack Developer (MERN)</p>
       <p className="text-sm mt-2">
