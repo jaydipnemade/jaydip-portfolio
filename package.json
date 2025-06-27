@@ -14,8 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     
-   "predeploy": "npm run build",
-  "deploy": "gh-pages -d build --no-cache"
+    "clean": "gh-pages-clean",
+    "predeploy": "npm run build",
+    "deploy": "npm run clean && gh-pages -d build"
   },
   "browserslist": {
     "production": [
