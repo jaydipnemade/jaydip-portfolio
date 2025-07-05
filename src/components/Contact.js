@@ -8,30 +8,32 @@ function Contact() {
       id="contact"
       className="relative bg-[#0b001a] text-white py-20 px-4 md:px-16 overflow-hidden top-wave-path"
     >
-      <div className="text-center font-medium text-6xl w-100 mt-20 mb-10">
-        {" "}
+      {/* Heading */}
+      <div className="text-center font-medium text-4xl md:text-6xl mt-10 md:mt-20 mb-10">
         Contact me
       </div>
-      <div className="flex justify-around ">
+
+      {/* Content */}
+      <div className="flex flex-col md:flex-row items-center justify-center gap-10">
         {/* Photo */}
-        <div className="mb-auto mt-auto md:ms-20 ">
+        <div className="flex-shrink-0">
           <img
             src={jaydipnemade}
             alt="Jaydip Nemade"
-            className="h-52 w-48 my-auto rounded-xl border-4 shadow-xl transition-transform hover:scale-105"
+            className="h-52 w-48 rounded-xl border-4 shadow-xl transition-transform hover:scale-105"
           />
         </div>
 
         {/* Info */}
-        <div className="bg-white rounded-xl shadow-lg p-6">
-          <div className="text-end text-gray-800 space-y-3 p-4">
-            <h1 className="text-4xl font-bold hover:underline cursor-pointer">
+        <div className="bg-white rounded-xl shadow-lg p-6 w-full max-w-md">
+          <div className="text-center md:text-end text-gray-800 space-y-3">
+            <h1 className="text-2xl md:text-4xl font-bold hover:underline cursor-pointer">
               <a href="mailto:jaydipnemade@gmail.com" className="text-gray-900">
                 Jaydip Nemade
               </a>
             </h1>
 
-            <p className="text-xl font-medium text-gray-700">
+            <p className="text-base md:text-xl font-medium text-gray-700">
               Full Stack Developer (MERN)
             </p>
 
@@ -59,7 +61,7 @@ function Contact() {
               </p>
             </div>
 
-            <div className="flex justify-end items-center gap-4 text-base pt-2 text-gray-700">
+            <div className="flex justify-center md:justify-end items-center gap-4 text-base pt-2 text-gray-700">
               <a
                 href="https://linkedin.com/in/jaydipnemade16"
                 className="flex items-center gap-1 hover:text-blue-600 transition"
@@ -70,7 +72,7 @@ function Contact() {
                 <span>LinkedIn</span>
               </a>
 
-              <span className="text-gray-400">|</span>
+              <span className="text-gray-400 hidden md:inline">|</span>
 
               <a
                 href="https://github.com/jaydipnemade"

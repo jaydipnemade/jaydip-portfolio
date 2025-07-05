@@ -16,7 +16,8 @@
      "deploy": "gh-pages -d build",
 
     "clean": "gh-pages-clean",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "start": "react-scripts start"
   },
   "browserslist": {
     "production": [
